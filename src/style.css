@@ -1,78 +1,330 @@
-*{
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
-button{
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 1em;
-}
-.header{
-    padding: 1em;
-}
-nav{
-    display: flex;
-    justify-content: space-around;
-}
-#content{
-    height: 100vh;
-    width: 100%;
-    background-image: url("/src/foodcover.jpg");
-    background-size: cover;
-    display: flex;
+
+header {
     align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 1em 0px 0px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex: 1;
     justify-content: center;
 }
-.text{
-    font-size: 2rem;
-    color: white;
-    padding-bottom: 10px;
-}
-input{
-    height: 40px;
-    width: 500px;
-    border: none;
-    border-radius: 25px;
-    text-indent: 10px;
 
+nav ul li {
+    margin: 0 15px;
 }
-.aboutHeader{
-    font-size: 2.8rem;
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.search-container input {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #444;
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    position: relative;
+    background: url('../src/images/man.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-content button:hover {
+    background-color: #e14e2d;
+}
+
+.must-have-items {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.must-have-items h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.must-have-items p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.items-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.centre {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 0.6em;
+    background-color: black;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
     text-align: center;
 }
-.aboouText{
-    font-size: 1.3rem;
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 300px;
+    margin: 10px;
     text-align: center;
 }
-.line{
-    width: 100px;
-    height: 5px;
-    background-color: orange;
-    text-align: center;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 2em;
+
+.footer-section h3 {
+    margin-bottom: 10px;
 }
-.brake-header{
-    font-size: clamp(24px, 5vw, 48px);
-    text-align: center;
-    padding: 1em;
-}
-.brake-text{
-    font-size: 1.5em;
-    text-align: center;
-}
-.juice::after{
-    content: '';
+
+.social-icons a {
+    margin: 0 10px;
     display: inline-block;
-    width: clamp(15rem,25vw,5rem); 
-    text-align: center;
-    border-bottom: 3px dotted black;
 }
-.juice-details{
-    text-align: center;
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
 }
-.juice-details:last-child{
-    font-weight: bold;
+
+.footer-section input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+.footer-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-section button:hover {
+    background-color: #e14e2d;
+}
+
+.footer-section a {
+    color: #ff5733;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content button {
+        font-size: 16px;
+    }
+
+    .must-have-items h2 {
+        font-size: 24px;
+    }
+
+    .must-have-items p {
+        font-size: 18px;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-container input {
+        margin-bottom: 10px;
+    }
+
+    .search-container button {
+        margin-left: 0;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content button {
+        font-size: 14px;
+    }
+
+    .must-have-items h2 {
+        font-size: 20px;
+    }
+
+    .must-have-items p {
+        font-size: 16px;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 100%;
+    }
 }

@@ -1,34 +1,44 @@
-import './style.css'
-import food from './foodcover.jpg'
-import {loadContent, loadAboutUs, loadMenu} from './load.js'
+const stocks = [];
+const cart = [];
 
-const contenDiv = document.getElementById("content")
-const homeBtn = document.getElementById("home")
-const aboutBtn = document.getElementById("about")
-const menuBtn = document.getElementById("menu")
+function Product(name, price, color, size, quantity, frontImage, backImage) {
+    this.name = name;
+    this.price = price;
+    this.color = color;
+    this.size = size;
+    this.quantity = quantity;
+    this.frontImage = frontImage;
+    this.backImage = backImage;
+}
 
-//event listeners
-// console.log(contenDiv)
-contenDiv.appendChild(loadContent())
-homeBtn.addEventListener("click", () => {
-    contenDiv.innerHTML = "";
-    contenDiv.style.alignItems = "center";
-    contenDiv.style.backgroundImage = `url(${food})`;
-    contenDiv.style.backgroundSize = "cover";
-    contenDiv.appendChild(loadContent());
+Product.prototype.changePrice = function(newPrice) {
+    this.price = newPrice;
+};
+
+function addProductTostocks(name, price, color, size, quantity, frontImage, backImage) {
+    const newProduct = new Product(name, price, color, size, quantity, frontImage, backImage);
+    stocks.push(newProduct);
+    return newProduct;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('.item');
+
+    items.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const description = item.querySelector('.description');
+            description.textContent = 'View Product';
+        });
+
+        item.addEventListener('mouseleave', function() {
+            const description = item.querySelector('.description');
+            description.textContent = description.getAttribute('data-original-text');
+        });
+    });
 });
 
-aboutBtn.addEventListener("click", () => {
-    contenDiv.innerHTML = "";
-    contenDiv.style.alignItems = "initial";
-    contenDiv.style.background = "#f5f5f5";
-    contenDiv.appendChild(loadAboutUs());
-});
-
-menuBtn.addEventListener("click", () => {
-    contenDiv.innerHTML = "";
-    contenDiv.style.alignItems = "initial";
-    contenDiv.style.background = "#f5f5f5";
-    contenDiv.appendChild(loadMenu());
-});
-
+export{
+    addProductTostocks,
+    stocks, 
+    cart
+}

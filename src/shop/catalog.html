@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/d005163ee0.js" crossorigin="anonymous"></script>
+    <script src="catalog.js" defer type="module"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="filter-container">
+        <label for="price-filter">Price:</label>
+        <input type="number" id="price-filter" placeholder="Max Price">
+        
+        <label for="color-filter">Color:</label>
+        <input type="text" id="color-filter" placeholder="Color">
+        
+        <label for="size-filter">Size:</label>
+        <input type="text" id="size-filter" placeholder="Size">
+        
+        <button id="filter-button">Filter</button>
+        <button id="clear-filter-button">Clear Filters</button>
+    </div>
+    <div id="product-detail" class="product-detail hidden">
+        <div class="product-detail-content">
+            <div class="productImage"><img id="product-detail-image" src="" alt="Product Image"></div>
+            <div class="left">
+                <h1 id="product-detail-name"></h1>
+                <div id="product-detail-price"></div>
+                <div id="product-detail-color"></div>
+                
+                <!-- Added size selector -->
+                <div id="product-detail-size">
+                    <label for="size-selector">Size:</label>
+                    <select id="size-selector">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+        
+                <!-- Added quantity input -->
+                <div id="product-detail-quantity">
+                    <label for="quantity-input">Quantity:</label>
+                    <input type="number" id="quantity-input" min="1" value="1">
+                </div>
+                
+                <button id="add-to-cart-button">Add to Cart</button>
+                <button id="checkout-button">Checkout</button>
+            </div>
+            <span class="close-btn">&times;</span>
+        </div>
+    </div>
+    <div id="stock-container" class="stock-container">
+    </div>
+    <div class="popup" id="popup">
+        <h3>We can't accept online orders right now<h3>
+        <p>Please contact us to complete your purchase.</p>
+        <button>Got It</button>
+</div>
+    <div class="footer"></div>
+</body>
+</html>

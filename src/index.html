@@ -13,19 +13,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlyFlex</title>
     <script src="https://kit.fontawesome.com/d005163ee0.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer type="module"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header> 
         <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="submit">Search</button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="Search" type="text" placeholder="Search...">
+        <div class="cart" id="hidden"><i class="fa-solid fa-cart-shopping"></i></div>
         </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Catalog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./shop/catalog.html">Catalog</a></li>
+                <li><a href="contact/contact.html">Contact</a></li>
             </ul>
             <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
         </nav>
@@ -46,22 +48,16 @@
             <p>Must Have Items</p>
             <div class="items-container">
                 <div class="item">
-                    <div class="centre">
-                        <img src="../src/images/balaenciaga.jpg" alt="Item 2">
-                    </div>
-                <div class="description">BALENCIAGA PLAIN T-SHIRT</div>
+                    <div class="centre balenciaga"></div>
+                <div class="description" data-original-text = "BALENCIAGA PLAIN T-SHIRT">BALENCIAGA PLAIN T-SHIRT</div>
                 </div>
                 <div class="item">
-                    <div class="centre">
-                        <img src="../src/images/corteiz.jpeg" alt="Item 1">
-                    </div>
-                    <div class="description">CRTZ T-SHIRT</div>
+                    <div class="centre crtz"></div>
+                    <div class="description" data-original-text = "CRTZ T-SHIRT">CRTZ T-SHIRT</div>
                 </div>
                 <div class="item">
-                    <div class="centre">
-                        <img src="../src/images/erotomania.png" alt="Item 3">
-                    </div>
-                    <div class="description">EROTOMANIA T-SHIRT</div>
+                    <div class="centre erotomania"></div>
+                    <div class="description" data-original-text = "EROTOMANIA T-SHIRT">EROTOMANIA T-SHIRT</div>
                 </div>
             </div>
         </section>

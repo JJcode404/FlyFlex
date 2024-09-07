@@ -444,7 +444,6 @@ textarea {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-    height: 100vh;
     /* padding: 0px 20px 20px; */
     display: flex;
     width: 800px;
@@ -454,7 +453,7 @@ textarea {
     width: 50%;
 }
 .productImage img {
-    width: 100%;
+    max-width: 70%;
     object-fit: cover;
     overflow: hidden;
     border-radius: 5px;
@@ -679,6 +678,8 @@ footer {
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    overflow: scroll;
+    height: 100vh;
 }
 .productImage img {
     max-width: 100%;
@@ -756,4 +757,7 @@ button:hover {
 }
 .popup button:hover {
     background-color: #e14e2d;
+}
+i.fa-solid.fa-cart-shopping {
+    color: white;
 }

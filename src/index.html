@@ -47,20 +47,55 @@
             <h2>Look Fly Today</h2>
             <p>Must Have Items</p>
             <div class="items-container">
-                <div class="item">
-                    <div class="centre balenciaga"></div>
+                <div class="item" productName = "Balenciaga" productPrice = "1200" productColor = "white" productImage = "./images/balenciaga-white.png">
+                <div class="centre balenciaga"></div>
                 <div class="description" data-original-text = "BALENCIAGA PLAIN T-SHIRT">BALENCIAGA PLAIN T-SHIRT</div>
                 </div>
-                <div class="item">
+                <div class="item" productName = "CRTZ T-SHIRT" productPrice = "1500" productColor = "black" productImage = "./images/crtxPlain.png" >
                     <div class="centre crtz"></div>
                     <div class="description" data-original-text = "CRTZ T-SHIRT">CRTZ T-SHIRT</div>
                 </div>
-                <div class="item">
+                <div class="item" productName = "Erotomania" productPrice = "1200" productColor = "white" productImage = "./images/EROTOMANIAWhite.png">
                     <div class="centre erotomania"></div>
                     <div class="description" data-original-text = "EROTOMANIA T-SHIRT">EROTOMANIA T-SHIRT</div>
                 </div>
             </div>
         </section>
+        <div id="product-detail" class="product-detail hidden">
+            <div class="product-detail-content">
+                <div class="productImage"><img id="product-detail-image" src="" alt="Product Image"></div>
+                <div class="left">
+                    <h1 id="product-detail-name"></h1>
+                    <div id="product-detail-price"></div>
+                    <div id="product-detail-color"></div>
+                    
+                    <!-- Added size selector -->
+                    <div id="product-detail-size">
+                        <label for="size-selector">Size:</label>
+                        <select id="size-selector">
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+            
+                    <!-- Added quantity input -->
+                    <div id="product-detail-quantity">
+                        <label for="quantity-input">Quantity:</label>
+                        <input type="number" id="quantity-input" min="1" value="1">
+                    </div>
+                    
+                    <button id="add-to-cart-button">Add to Cart</button>
+                    <button id="checkout-button">Checkout</button>
+                </div>
+                <span class="close-btn">&times;</span>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <h3>We can't accept online orders right now<h3>
+            <p>Please contact us to complete your purchase.</p>
+            <button>Got It</button>
+    </div>
     </main>
     <footer>
         <div class="footer-container">

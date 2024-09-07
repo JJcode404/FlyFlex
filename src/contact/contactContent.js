@@ -11,7 +11,7 @@ headerDiv.innerHTML = `<header>
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../shop/catalog.html">Catalog</a></li>
-                <li><a href="contact/contact.html">Contact</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
             <a href="../cart/cart.html">
                 <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
